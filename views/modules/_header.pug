@@ -1,0 +1,17 @@
+header.header
+  img.header-element(src="./images/element.png", alt="Element")
+  nav.header-nav
+    .container.header-nav-container
+      +logo()
+      ul.header-menu
+        each menu in [{href: "/", title: "Home"}, {href: "/", title: "Find a doctor"}, {href: "/", title: "Apps"}, {href: "/", title: "Testimonials"}, {href: "/", title: "About us"}]
+          li.header-menu-item
+            a.header-menu-link(href= menu.href)= menu.title
+  .illustration
+    .container.illustration-container
+      .illustration-content
+        h1.heading.illustration-heading Virtual healthcare for you
+        p.caption.illustration-caption Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone
+        a.button.illustration-button(href="#!") Consult today
+      .illustration-image
+        img(src="./images/illustration.png", alt="illustration")

@@ -1,0 +1,38 @@
+@use "../../abstracts" as abst;
+
+.leading {
+  &-container {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-content {
+    max-width: 480px;
+    width: 100%;
+  }
+
+  &-heading {
+    font-size: 36px;
+    line-height: calc(56 / 36);
+    position: relative;
+    padding-bottom: 26px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      @include abst.size(56px, 2px);
+      background-color: #000;
+      border-radius: 10px;
+    }
+  }
+
+  &-caption {
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    margin-block: 30px 40px;
+    max-width: 440px;
+  }
+}

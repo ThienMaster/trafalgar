@@ -1,0 +1,41 @@
+@use "../../abstracts" as abst;
+
+.download {
+  margin-block: 230px 260px;
+
+  &-container {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+    padding-left: 145px;
+  }
+
+  &-content {
+    max-width: 420px;
+    width: 100%;
+  }
+
+  &-heading {
+    font-size: 36px;
+    line-height: calc(48 / 36);
+    padding-bottom: 30px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      @include abst.size(56px, 2px);
+      background-color: #000;
+      border-radius: 6px;
+    }
+  }
+
+  &-caption {
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    margin-block: 30px 40px;
+    max-width: 380px;
+  }
+}

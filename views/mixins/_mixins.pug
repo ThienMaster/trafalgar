@@ -1,0 +1,26 @@
+//- /*---------- Mixin Logo ----------*/
+mixin logo()
+  a.logo(href="/")
+    span.logo-img T
+    span.logo-text Trafalgar
+
+
+//- /*---------- Mixin Services Item ----------*/
+mixin servicesItem(image, alt, heading, caption)
+  li.services-item
+    .services-image
+      img(src= image, alt= alt)
+    h3.heading= heading
+    p.caption= caption
+
+//- /*---------- Mixin Articles Item ----------*/
+mixin articlesItem(image, alt, title, caption)
+  li.articles-item
+    .articles-image
+      img(src= image, alt= alt)
+    .articles-content
+      h3.heading.articles-title= title
+      p.caption.articles-caption= caption
+      a.button.articles-button(href="#!")
+        span Read more
+        i.fa-solid.fa-arrow-right-long

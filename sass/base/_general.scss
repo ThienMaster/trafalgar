@@ -1,0 +1,50 @@
+@use "../abstracts" as abst;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: abst.$font-primary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: abst.$gray-7d;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.logo {
+  @include abst.flexBox(((align-items: center, gap: 12px)));
+
+  &-img {
+    @include abst.flexBox(((align-items: center, justify-content: center)));
+    @include abst.size(41px);
+    border-radius: 50%;
+    font-size: 26px;
+    @include abst.fontWeight("bold");
+  }
+
+  &-text {
+    font-size: 24px;
+    @include abst.fontWeight("bold");
+  }
+}
+
+.heading {
+  color: abst.$text-heading;
+  @include abst.fontWeight("bold");
+}
+
+.caption {
+  @include abst.fontWeight("medium");
+}

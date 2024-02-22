@@ -1,0 +1,76 @@
+@use "../../abstracts" as abst;
+
+.header {
+  padding-top: 50px;
+  position: relative;
+
+  &-element {
+    position: absolute;
+    top: 160px;
+  }
+
+  &-nav-container {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  .logo {
+    &-img {
+      background-color: abst.$blue-458;
+      color: #fff;
+    }
+
+    &-text {
+      color: #233348;
+    }
+  }
+
+  &-menu {
+    @include abst.flexBox(((align-items: center, gap: 40px)));
+
+    &-link {
+      display: block;
+      color: abst.$gray-7d;
+      font-size: 18px;
+      transition: 0.25s;
+
+      &:hover {
+        text-shadow: 1px 0 0 currentColor;
+        color: #1f1534;
+      }
+    }
+  }
+}
+
+.illustration {
+  margin-top: 84px;
+
+  &-container {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between, gap: 109px))
+    );
+  }
+
+  &-content {
+    max-width: 445px;
+    width: 100%;
+  }
+
+  &-heading {
+    font-size: 48px;
+    line-height: calc(56 / 48);
+  }
+
+  &-caption {
+    font-size: 21px;
+    line-height: calc(32 / 21);
+    margin-block: 25px 45px;
+    letter-spacing: 0.1px;
+  }
+
+  &-button {
+    background-color: abst.$blue-458;
+    color: #fff;
+  }
+}

@@ -1,0 +1,109 @@
+@use "../../abstracts" as abst;
+
+.testimonials {
+  &-container {
+    padding: 0 50px;
+  }
+
+  &-wrapper-content {
+    background-image: linear-gradient(208deg, #67c3f3 9.05%, #5a98f2 76.74%);
+    border-radius: 24px;
+    height: 425px;
+    position: relative;
+  }
+
+  &-element {
+    &-1 {
+      position: absolute;
+      right: -45px;
+      top: -10px;
+    }
+    &-2 {
+      position: absolute;
+      bottom: 39px;
+      left: -50px;
+      z-index: -1;
+    }
+  }
+
+  &-content {
+    padding: 64px 118px 79px;
+  }
+
+  &-heading {
+    color: abst.$text-white;
+    font-size: 36px;
+    line-height: calc(48 / 36);
+    text-align: center;
+    padding-bottom: 25px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      @include abst.size(56px, 2px);
+      border-radius: 6px;
+      background-color: #fff;
+    }
+  }
+
+  &-wrapper-author {
+    margin-top: 66px;
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-author {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: center, gap: 29px))
+    );
+
+    &-image {
+      @include abst.size(141px);
+      flex-shrink: 0;
+      background-color: #fff;
+      overflow: hidden;
+      border-radius: 100rem;
+
+      img {
+        @include abst.imageCover;
+        border-radius: 100rem;
+        padding: 4px;
+      }
+    }
+
+    &-content {
+      @include abst.flexBox(
+        ((justify-content: center, flex-direction: column))
+      );
+    }
+
+    &-name {
+      color: abst.$text-white;
+      font-size: 22px;
+      line-height: calc(48 / 22);
+    }
+
+    &-bio {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 18px;
+      line-height: calc(48 / 18);
+    }
+
+    &-caption {
+      max-width: 420px;
+      width: 100%;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 19px;
+      line-height: calc(30 / 19);
+    }
+  }
+
+  &-arrow-nav {
+    margin: 42px auto 0;
+  }
+}

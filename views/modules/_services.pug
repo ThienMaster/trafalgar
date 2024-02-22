@@ -1,0 +1,20 @@
+-
+  var services_list = [
+    {image: "./images/services/Frame.png", alt: "Search", heading: "Search doctor", caption: "Choose your doctor from thousands of specialist, general, and trusted hospitals"},
+    {image: "./images/services/Frame_1.png", alt: "Online pharmacy", heading: "Online pharmacy", caption: "Buy  your medicines with our mobile application with a simple delivery system"},
+    {image: "./images/services/Frame_2.png", alt: "Consultation", heading: "Consultation", caption: "Free consultation with our trusted doctors and get the best recomendations"},
+    {image: "./images/services/Frame_3.png", alt: "Details info", heading: "Details info", caption: "Free consultation with our trusted doctors and get the best recomendations"},
+    {image: "./images/services/Frame_4.png", alt: "Emergency care", heading: "Emergency care", caption: "You can get 24/7 urgent care for yourself or your children and your lovely family"},
+    {image: "./images/services/Frame_5.png", alt: "Tracking", heading: "Tracking", caption: "Track and save your medical history and health data "}
+  ];
+
+section.services
+  img.services-vector(src="./images/Vector.png", alt="Vector")
+  img.services-element(src="./images/element_1.png", alt="Element")
+  .container.services-container
+    h2.heading.services-heading Our services
+    p.caption.services-caption We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health
+    ul.services-list
+      each services_item in services_list
+        +servicesItem(services_item.image, services_item.alt, services_item.heading, services_item.caption)
+    a.button.services-button(href="#!") Learn more

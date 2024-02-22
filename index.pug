@@ -1,0 +1,29 @@
+include ./views/mixins/_mixins
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Trafalgar
+    //- Google Fonts
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap", rel="stylesheet")
+
+    //- Fonts Awesome
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css")
+
+    //- CSS
+    link(rel="stylesheet", href="./styles/app.css")
+  body
+    .wrapper
+      include ./views/modules/_header
+      main
+        include ./views/modules/_services
+        include ./views/modules/_leading
+        include ./views/modules/_download
+        include ./views/modules/_testimonials
+        include ./views/modules/_article
+
+      include ./views/modules/_footer

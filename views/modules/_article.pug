@@ -1,0 +1,16 @@
+-
+  var articles_list = [
+    {image: "./images/articles/article.png", alt: "Disease detection, check up in the laboratory", title: "Disease detection, check up in the laboratory", caption: "In this case, the role of the health laboratory is very important to do a disease detection..."},
+    {image: "./images/articles/article_1.png", alt: "Herbal medicines that are safe for consumption", title: "Herbal medicines that are safe for consumption", caption: "Herbal medicine is very widely used at this time because of its very good for your health..."},
+    {image: "./images/articles/article_2.png", alt: "Natural care for healthy facial skin", title: "Natural care for healthy facial skin", caption: "A healthy lifestyle should start from now and also for your skin health.There are some..."},
+  ];
+
+section.articles
+  img.articles-element(src="./images/element_1.png", alt="Element")
+  img.articles-vector(src="./images/Vector_1.png", alt="Vector")
+  .container.articles-container
+    h2.heading.articles-heading Check out our latest article
+    ul.articles-list
+      each articles_item in articles_list
+        +articlesItem(articles_item.image, articles_item.alt, articles_item.title, articles_item.caption)
+    a.button.articles-viewall(href="#!") View all

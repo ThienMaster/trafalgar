@@ -1,0 +1,94 @@
+@use "../../abstracts" as abst;
+.articles {
+  margin-block: 222px 202px;
+  position: relative;
+
+  &-element {
+    position: absolute;
+    top: 120px;
+    left: 160px;
+    z-index: -2;
+  }
+
+  &-vector {
+    position: absolute;
+    right: 0;
+    top: 100px;
+    z-index: -2;
+  }
+
+  &-container {
+    padding: 0 50px;
+  }
+
+  &-heading {
+    color: abst.$text-heading;
+    font-size: 36px;
+    line-height: calc(56 / 36);
+    text-align: center;
+    padding-bottom: 26px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      @include abst.size(56px, 2px);
+      border-radius: 5px;
+      background-color: #000;
+    }
+  }
+
+  &-list {
+    margin-block: 79px 69px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 34px;
+  }
+
+  &-item {
+    @include abst.flexBox(((flex-direction: column, justify-content: center)));
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.4);
+  }
+
+  &-image {
+    img {
+      @include abst.imageCover;
+      border-radius: 20px 20px 0 0;
+    }
+  }
+
+  &-content {
+    padding: 21px 33px 35px;
+  }
+
+  &-title {
+    font-size: 21px;
+    line-height: calc(32 / 21);
+    max-width: 251px;
+    width: 100%;
+  }
+
+  &-caption {
+    color: abst.$gray-7d;
+    font-size: 16px;
+    line-height: calc(28 / 16);
+    max-width: 251px;
+    width: 100%;
+    margin-block: 12px 25px;
+  }
+
+  &-button {
+    border: none;
+    padding: 0;
+  }
+
+  &-viewall {
+    margin: 0 auto;
+  }
+}

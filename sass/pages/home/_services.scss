@@ -1,0 +1,82 @@
+@use "../../abstracts" as abst;
+
+.services {
+  margin-block: 192px 220px;
+  position: relative;
+
+  &-heading {
+    font-size: 36px;
+    line-height: calc(56 / 36);
+    text-align: center;
+    padding-bottom: 26px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, -50%);
+      @include abst.size(56px, 2px);
+      background-color: #000;
+      border-radius: 5px;
+    }
+  }
+
+  &-caption {
+    text-align: center;
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    max-width: 952px;
+    margin: 33px auto 80px;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 37px 34px;
+    margin-bottom: 72px;
+  }
+
+  &-item {
+    @include abst.flexBox(((align-items: flex-start, flex-direction: column)));
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.4);
+    padding: 54px 37px 47px;
+
+    .heading {
+      font-size: 24px;
+      line-height: calc(56 / 24);
+      margin-block: 23px 10px;
+    }
+
+    .caption {
+      font-size: 16px;
+      line-height: calc(28 / 16);
+      max-width: 266px;
+    }
+  }
+
+  &-button {
+    margin: 0 auto;
+  }
+
+  &-image {
+    @include abst.size(100%, 90px);
+    object-fit: cover;
+  }
+
+  &-vector {
+    position: absolute;
+    top: 180px;
+    z-index: -1;
+  }
+
+  &-element {
+    position: absolute;
+    top: 48%;
+    right: 8.5%;
+    z-index: -1;
+  }
+}

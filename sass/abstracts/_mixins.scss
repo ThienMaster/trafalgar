@@ -1,0 +1,27 @@
+@mixin size($width: 0, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin imageCover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@mixin fontWeight($value) {
+  @if $value == "medium" {
+    font-weight: 300;
+  } @else if $value == "bold" {
+    font-weight: 700;
+  }
+}
+
+@mixin flexBox($options) {
+  display: flex;
+  align-items: map-get($options, align-items);
+  justify-content: map-get($options, justify-content);
+  flex-direction: map-get($options, flex-direction);
+  flex-wrap: map-get($options, flex-wrap);
+  gap: map-get($options, gap);
+}
